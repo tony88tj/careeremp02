@@ -1,0 +1,27 @@
+<%= link_to 'New Employee', new_employee_path %>
+
+
+<table class="table table-striped table-hover">
+<thead>
+  <tr>
+    <th>Name</th>
+    <th>Last</th>
+    <th>Dept</th>
+    <th>Emp Id</th>
+    <th>hire</th>
+    <th colspan="3"></th>
+  </tr>
+</thead>
+
+  <tbody>
+  <% @employees.each do |employee| %>
+    <%= render employee %>
+  <% end %>
+
+</tbody>
+</table>
+
+
+
+
+

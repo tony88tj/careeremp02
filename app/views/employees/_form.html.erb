@@ -1,0 +1,49 @@
+<%= form_with(model: employee) do |form| %>
+  <% if employee.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+        <% employee.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="card text-dark bg-light mb-3 border-dark" style="max-width: 30rem;">
+  <h1 class="card-header">New / Edit Employee</h1>
+  <div class="card-body">
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :fisrt %> 
+    <%= form.text_field :first , class:"form-control", placeholder:"fistname" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :last %> 
+    <%= form.text_field :last , class:"form-control", placeholder:"lastname" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :dept %> 
+    <%= form.text_field :dept , class:"form-control", placeholder:"department" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :empid %> 
+    <%= form.text_field :empid , class:"form-control", placeholder:"empid" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :startdate %> 
+    <%= form.text_field :startdate , class:"form-control", placeholder:"startdate" %>
+  </div>
+
+  </div>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
