@@ -3,6 +3,7 @@ class EmployeesController < ApplicationController
 
   # GET /employees or /employees.json
   def index
+    @emp_count = Employee.count
     @employees = Employee.employee_search(params[:search])
   end
 
