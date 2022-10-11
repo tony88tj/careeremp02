@@ -1,0 +1,61 @@
+<%= form_with(model: todo) do |form| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+        <% todo.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+</br>
+
+<div class="card text-dark bg-light mb-3 border-dark" style="max-width: 30rem;">
+  <h1 class="card-header">New / Edit Todo</h1>
+  <div class="card-body">
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :category %>
+    <%= form.text_field :category, class:"form-control", placeholder:"category" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, class:"form-control", placeholder:"subject" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :desc %>
+    <%= form.text_field :desc, class:"form-control", placeholder:"description" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :priority %>
+    <%= form.text_field :priority , class:"form-control", placeholder:"priority"%>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:"form-control", placeholder:"name" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :tel %>
+    <%= form.text_field :tel, class:"form-control", placeholder:"telephone" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :status %>
+    <%= form.text_field :status, class:"form-control", placeholder:"status" %>
+  </div>
+
+</div>
+</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

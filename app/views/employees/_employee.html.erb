@@ -1,13 +1,21 @@
 <tr>
+  <td><%= employee.lname %></td>
   <td><%= employee.first %></td>
   <td><%= employee.last %></td>
-  <td><%= employee.dept %></td>
+  <td><%= employee.email %></td>
+  <td><%= employee.first.downcase %>.<%= employee.last.downcase %></td>
+  <td><%= employee.first.upcase %>.<%= employee.last.upcase %></td>
   <td><%= employee.empid %></td>
   <td><%= employee.startdate %></td>
-  
+  <td><%= employee.dept %></td>
+  <td><%= employee.paytype %></td>
+  <td><%= employee.badgeno %></td>
+  <td><%= employee.ext %></td>
+  <td><%= employee.telephone %></td>
+  <td><%= employee.cell %></td>
+  <td><%= employee.pic %></td>
   <td><%= link_to 'Show', employee %></td>
   <td><%= link_to 'Edit', edit_employee_path(employee) %></td>
   <td><%= link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
 
 </tr>

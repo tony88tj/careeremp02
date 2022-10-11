@@ -9,7 +9,8 @@ class Employee < ApplicationRecord
       searchArray = ([array_desc,  ("%" + search.split.join("%,%") + "%").split(",")]).flatten
       Employee.where(searchArray)
     else
-      Employee.all.order(:employee_id_less)
+      #Employee.where.not(status: "not").order(:employee_id_less)
+      Employee.order(:employee_id_less)
     end
   end
 end

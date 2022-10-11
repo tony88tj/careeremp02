@@ -1,0 +1,2 @@
+https://api.rubyonrails.org/v7.0.4/classes/ActiveRecord/ConnectionAdapters/SchemaStatements.html#method-i-change_table
+rails g migration add_email_to_employees email:string

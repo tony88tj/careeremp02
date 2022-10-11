@@ -11,12 +11,18 @@
     </div>
   <% end %>
 
+
   <div class="card text-dark bg-light mb-3 border-dark" style="max-width: 30rem;">
   <h1 class="card-header">New / Edit Employee</h1>
   <div class="card-body">
 
   <div class="field form-group text-primary fw-bold">
-    <%= form.label :fisrt %> 
+    <%= form.label :lname %> 
+    <%= form.text_field :lname , class:"form-control", placeholder:"lname" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :first %> 
     <%= form.text_field :first , class:"form-control", placeholder:"fistname" %>
   </div>
 
@@ -25,9 +31,9 @@
     <%= form.text_field :last , class:"form-control", placeholder:"lastname" %>
   </div>
 
-  <div class="field form-group text-primary fw-bold" >
-    <%= form.label :dept %> 
-    <%= form.text_field :dept , class:"form-control", placeholder:"department" %>
+  <div class="field form-group text-primary fw-bold">
+    <%= form.label :email %> 
+    <%= form.text_field :email , class:"form-control", placeholder: "email" %>
   </div>
 
   <div class="field form-group text-primary fw-bold">
@@ -40,6 +46,44 @@
     <%= form.text_field :startdate , class:"form-control", placeholder:"startdate" %>
   </div>
 
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :dept %> 
+    <%= form.text_field :dept , class:"form-control", placeholder:"department" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :paytype %> 
+    <%= form.text_field :paytype , class:"form-control", placeholder:"paytype" %>
+  </div>
+  
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :badgeno %> 
+    <%= form.text_field :badgeno , class:"form-control", placeholder:"badgeno" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :ext %> 
+    <%= form.text_field :ext , class:"form-control", placeholder:"ext" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :telephone %> 
+    <%= form.text_field :telephone , class:"form-control", placeholder:"telephone" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :cell %> 
+    <%= form.text_field :cell , class:"form-control", placeholder:"cell" %>
+  </div>
+
+  <div class="field form-group text-primary fw-bold" >
+    <%= form.label :pic %> 
+    <%= form.text_field :pic , class:"form-control", placeholder:"pic" %>
+  </div>
+
+
+
+  
   </div>
   </div>
 
